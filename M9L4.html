@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>LOOPING trough arrays inside arrays</h2>
+	<p id="demo"></p>
+
+	<script>
+		var myOBJ, i, j, x ="";
+		myOBJ={
+			"name":"john",
+			"age:":73,
+			"cars":[{
+				"name":"ford","models":["fieste","focus","nustag"]},
+				{
+				"name":"bmw","models":["320","x3","x5"]},
+				{
+				"name":"fiat","models":["500","panda"]}
+				]
+		}
+		for (i in myOBJ.cars){
+			x += "<h2>" +myOBJ.cars[i].name +"</h2>";
+			for(j in myOBJ.cars[i].models){
+				x += myOBJ.cars[i].models[j]+"<br>"
+			}
+		}
+
+		document.getElementById('demo').innerHTML = x;
+	</script>
+
+</body>
+</html>
